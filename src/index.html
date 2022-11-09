@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/global.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+  <main
+    class="w-screen h-screen flex flex-col justify-center items-center font-overpass text-base bg-secondary-800 text-secondary-0">
+    <div class="flex flex-col justify-center items-center w-[90%] h-[400px] md:max-w-1/2 md:w-auto md:aspect-square max-h-1/2 bg-secondary-600 p-8 rounded-3xl">
+      <!-- Rating state start -->
+      <div id="rating-box"
+        class="flex flex-col w-full h-full justify-center items-center">
+        <div class="w-full h-full flex flex-col mb-0">
+          <div class="w-10 h-10 bg-secondary-400/10 rounded-full flex items-center justify-center mb-8 md:m-0"><img
+              src="../images/icon-star.svg" id="star-icon" alt="Star icon" class="w-4"></div>
+          <h1 class="font-bold text-[24px] mb-3 md:mt-10 md:mb-3">How did we do?</h1>
+          <p class="text-secondary-400 mb-0">Please let us know how we did with your support request. All feedback is
+            appreciated
+            to help us improve our offering!</p>
+        </div>
+
+        <div class="text-secondary-400 mb-6 w-full flex justify-between">
+          <button id="1" onclick="setRating(this.id);"
+            class="w-10 h-10 md:w-12 md:h-12 mx-1 bg-secondary-400/10 rounded-full pt-1 hover:bg-secondary-400 hover:text-secondary-0 transition-colors duration-300 font-bold focus:bg-primary-orange focus:text-secondary-0">1</button>
+          <button id="2" onclick="setRating(this.id);"
+            class="w-10 h-10 md:w-12 md:h-12 mx-1 bg-secondary-400/10 rounded-full pt-1 hover:bg-secondary-400 hover:text-secondary-0 transition-colors duration-300 font-bold focus:bg-primary-orange focus:text-secondary-0">2</button>
+          <button id="3" onclick="setRating(this.id);"
+            class="w-10 h-10 md:w-12 md:h-12 mx-1 bg-secondary-400/10 rounded-full pt-1 hover:bg-secondary-400 hover:text-secondary-0 transition-colors duration-300 font-bold focus:bg-primary-orange focus:text-secondary-0">3</button>
+          <button id="4" onclick="setRating(this.id);"
+            class="w-10 h-10 md:w-12 md:h-12 mx-1 bg-secondary-400/10 rounded-full pt-1 hover:bg-secondary-400 hover:text-secondary-0 transition-colors duration-300 font-bold focus:bg-primary-orange focus:text-secondary-0">4</button>
+          <button id="5" onclick="setRating(this.id);"
+            class="w-10 h-10 md:w-12 md:h-12 mx-1 bg-secondary-400/10 rounded-full pt-1 hover:bg-secondary-400 hover:text-secondary-0 transition-colors duration-300 font-bold focus:bg-primary-orange focus:text-secondary-0">5</button>
+        </div>
+
+        <div class="w-full flex justify-center items-center"><button id="submit" disabled onclick="submitRating()"
+            class="w-full h-10 rounded-full disabled:bg-primary-orange/50 disabled:text-secondary-0/50 enabled:bg-primary-orange uppercase tracking-widest font-bold align-bottom pt-[3px] enabled:hover:bg-secondary-0 enabled:hover:text-primary-orange transition-colors duration-300 active:bg-secondary-0/10">Submit</button>
+        </div>
+      </div>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+
+      <div id="thank-you" class="hidden flex flex-col relative w-full h-full items-center">
+        <img src="../images/illustration-thank-you.svg" alt="Thank you illustration" class="my-6">
+
+        <div class="mb-5 pt-3 pb-2 px-4 bg-secondary-400/10 rounded-full text-primary-orange">You selected <span id="rating"></span> out of 5</div>
+
+        <h1 class="font-bold text-[24px]">Thank you!</h1>
+
+        <p class="text-center text-base my-3 text-secondary-200">
+          We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+
+    <!-- Thank you state end -->
+  </main>
+
+
+  <div class="attribution hidden ">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/souzathg" target="_blank">@souzathg</a>.
+  </div>
+</body>
+
+<script src="./javascript/scripts.js"></script>
+
+</html>
